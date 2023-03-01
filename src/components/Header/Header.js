@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { Menu, Search, User } from 'react-feather'
 
-import { QUERIES, WEIGHTS } from '../../constants'
+import { QUERIES } from '../../constants'
 
 import MaxWidthWrapper from '../MaxWidthWrapper'
 import Logo from '../Logo'
