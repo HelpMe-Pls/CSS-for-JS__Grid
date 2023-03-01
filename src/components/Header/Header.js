@@ -69,8 +69,17 @@ const MainHeader = styled(MaxWidthWrapper)`
 	margin-top: 32px;
 	margin-bottom: 48px;
 
-	@media ${QUERIES.desktopAndUp} {
-		justify-content: space-between;
+	@media ${QUERIES.tabletAndUp} {
+		margin-top: 48px;
+		margin-bottom: 72px;
+	}
+	@media ${QUERIES.laptopAndUp} {
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		align-items: center;
+		justify-content: revert;
+		margin-top: 16px;
+		margin-bottom: 72px;
 	}
 `
 const ActionGroup = styled.div`
@@ -88,34 +97,28 @@ const ActionGroup = styled.div`
 
 const DesktopActionGroup = styled(ActionGroup)`
 	display: none;
-
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		display: flex;
-		margin-top: 16px;
 	}
 `
 
 const SubscribeWrapper = styled.div`
 	display: none;
-	postion: relative;
-
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		display: revert;
-		text-align: center;
-		margin-top: 5px;
+		position: relative;
+		justify-self: end;
 	}
 `
 const Link = styled.a`
-	color: var(--color-gray-900);
-	font-family: var(--font-family-serif);
-	font-style: italic;
-	font-weight: ${WEIGHTS.normal};
-	font-size: 0.875rem;
-	text-decoration: underline;
 	position: absolute;
+	min-width: 100%; // So that the "text-align: center" takes effect
 	margin-top: 8px;
-	width: max-content;
-	margin-left: -53px;
+	text-align: center;
+	font-size: 0.875rem;
+	color: var(--color-gray-900);
+	font-style: italic;
+	text-decoration: underline;
 `
 
 export default Header
