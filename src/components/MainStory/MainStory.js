@@ -42,7 +42,7 @@ const Abstract = styled.p`
 
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 8; /* Applies the ellipsis at the end of the third line */
+	-webkit-line-clamp: 8;
 	overflow: hidden;
 
 	@media ${QUERIES.tabletAndUp} {
