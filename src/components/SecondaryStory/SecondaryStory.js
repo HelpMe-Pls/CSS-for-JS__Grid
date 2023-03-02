@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { QUERIES, COLORS } from '../../constants'
+import { QUERIES } from '../../constants'
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
 	return (
