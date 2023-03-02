@@ -53,11 +53,11 @@ const Wrapper = styled.div`
 
 	@media ${QUERIES.tabletAndUp} {
 		gap: 64px;
-		grid-template-columns: 100%;
+		grid-template-columns: minmax(69px, 1fr);
 	}
 	@media ${QUERIES.laptopAndUp} {
 		gap: 16px;
-		grid-template-columns: 1fr minmax(0px, 1fr);
+		grid-template-columns: 1fr minmax(69px, 1fr);
 	}
 `
 
