@@ -5,15 +5,17 @@ import { QUERIES, COLORS } from '../../constants'
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
 	return (
-		<a href={`/story/${id}`}>
+		<Link href={`/story/${id}`}>
 			<Wrapper>
 				<Image alt={image.alt} src={image.src} />
 				<Heading>{title}</Heading>
 				<Abstract>{abstract}</Abstract>
 			</Wrapper>
-		</a>
+		</Link>
 	)
 }
+
+const Link = styled.a``
 
 const Wrapper = styled.article`
 	display: grid;
@@ -23,6 +25,13 @@ const Wrapper = styled.article`
 	gap: 4px 16px;
 	grid-template-columns: 120px 1fr;
 	color: var(--color-gray-900);
+
+	@media ${QUERIES.tabletOnly} {
+		grid-template-areas:
+			'image image'
+			'heading heading'
+			'abstract abstract';
+	}
 `
 
 const Image = styled.img`
