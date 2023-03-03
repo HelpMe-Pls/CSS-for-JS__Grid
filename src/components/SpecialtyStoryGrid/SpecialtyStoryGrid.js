@@ -83,8 +83,8 @@ const SportsStories = styled.div`
 
 	@media ${QUERIES.tabletAndUp} {
 		display: flex;
-		overflow: auto;
-		grid-template-columns: revert;
+		// overflow: auto;
+		// grid-template-columns: revert;
 	}
 `
 
